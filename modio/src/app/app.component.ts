@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'modio';
+
+  playAudio(){
+    var file = document.getElementById("AudioFile");
+    var sound = document.getElementById("audio");
+    sound.src = URL.createObjectURL(file.files[0]);
+  }
 }
